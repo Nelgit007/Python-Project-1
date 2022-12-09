@@ -1,0 +1,32 @@
+==> Using Pygame. A collection of fun powerful pyhon modules that manages graphics anniimation, and even sound.
+Project folder --> Alien Invation Folder --> install pygame and build.
+
+Plan: 
+--> The player will control a rocket ship that appears at the bottom center of the game.
+--> The player can move ship to right or left using the arrow keys and shoot bullets using space bar
+--> When game starts a fleet of alien will fill the sky above the top
+--> Shoot doen aliens before they reach player or bottom of screen
+
+STEP1:
+Navigate to folder and install pygame:
+######
+python -m pip install -user pygame 	or 	pip install pygame
+#####
+
+STEP 2:
+Each time we introuduce a new functionality into the game we would typically create new settings. Instead of adding the settings into our code its best to create a seperate module
+called settings.py, that contains a class called Settings:
+NB: We can have various files that use the same settings module.
+
+STEP 3:
+Import settings from Settings, and instantiate the new Settings class
+
+STEP 4: 
+Add the ship to your game by loading an Image. convert your jpeg to bitmap.
+
+STEP 5:
+We create a ship module that will have the class Ship, this will manage the behaviour of the player.
+
+STEP 6:
+Refactor code:
+
