@@ -1,11 +1,10 @@
-==> Using Pygame. A collection of fun powerful pyhon modules that manages graphics anniimation, and even sound.
-Project folder --> Alien Invation Folder --> install pygame and build.
+==> Using Pygame. Pygame is a collection of fun powerful pyhon modules that manages graphics anniimation, and even sound.
 
-Plan: 
+Game development Plan (JIRA or ZenHUb): 
 --> The player will control a rocket ship that appears at the bottom center of the game.
 --> The player can move ship to right or left using the arrow keys and shoot bullets using space bar
 --> When game starts a fleet of alien will fill the sky above the top
---> Shoot doen aliens before they reach player or bottom of screen
+--> Shoot doen aliens before they reach player or bottom of screen.
 
 STEP1:
 Navigate to folder and install pygame:
@@ -14,19 +13,57 @@ python -m pip install -user pygame 	or 	pip install pygame
 #####
 
 STEP 2:
-Each time we introuduce a new functionality into the game we would typically create new settings. Instead of adding the settings into our code its best to create a seperate module
+Each time we introduce a new functionality into the game we would typically create new settings. Instead of adding the settings into our code its best to create a seperate module
 called settings.py, that contains a class called Settings:
-NB: We can have various files that use the same settings module.
+
+NB: We can have various files that use the same settings module. there we can easily adjust values of our game, rather than hard coding direct values
 
 STEP 3:
-Import settings from Settings, and instantiate the new Settings class
+Create a settings module, and import Settings class from settings, and instantiate the new Settings class.
 
 STEP 4: 
-Add the ship to your game by loading an Image. convert your jpeg to bitmap.
+Create a ship module that will manegthe behaviuor of players "ship" to your game by loading an Image. convert your jpeg to bitmap.
 
 STEP 5:
 We create a ship module that will have the class Ship, this will manage the behaviour of the player.
 
 STEP 6:
 Refactor code:
+Simplify the strcuture if code, to make it easier to build on
+Break run_game() into helper method.
+-first create check_events() -- this is the helper method
+
+STEP 7:
+Write a program to ensure player can navigate the ship to either a right or left.
+Write  method for the keys, whenever a player presses a key each movement in pygame is considered an event.
+
+STEP 8:
+Ship always moves one pixel per cycle, to adjust the speed of ship we go to settings.
+
+
+STEP 9:
+To avoid our ship ffrom going off the screen we set cetain ranges.
+
+STEP 10:
+refactoring _check_events()
+
+Also, launcing game in full_screen mode.
+BASIC STRUCTURE OF GAME.
+NB: So far we only run te alien-invasion file to play the game, the other files are imported into the alien-inasion file.
+
+STEP 11:
+Implementing the shooting mechanism with our space ship. Add bullet feature to settings. Then create a bullet module with Bullet class. NB:the bullet has no image
+
+STEP 12:
+Now we wrute code to fire bullet each time the player presses a space bar. Then we write create a group to store all the live bullets so as to maage all bullets already fired.
+
+STEP 13:
+Modifying helper methods check keydown events. 
+
+STEP 14:
+The bullets fired are only not visible after the pass thru the top of our screen ut still exist and can ba problem in memory if not calculated or deleted.
+NB: We cant remove a list of items over a for loop
+
+
+	
 
