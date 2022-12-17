@@ -64,6 +64,41 @@ STEP 14:
 The bullets fired are only not visible after the pass thru the top of our screen ut still exist and can ba problem in memory if not calculated or deleted.
 NB: We cant remove a list of items over a for loop
 
+STEP 15:
+Adding aliens to the game. since we are using a pygaem>Group to group all aliens together we do not need a method for drawing our aliens.
 
-	
+-add an alien group
+Add a helper method for creating a fleet of alien
+_create_fleet()
+add aliens to your alien group
+-Draw alien to screen to make visible under helper mthd _update_screen
+
+Step 16:
+Build an entire alien flee, first figure our how man aliens can fit across the screen.
+-How much horizontal row
+-Each row margin is alien size
+
+First instantiate a single alien to determine the spacing, then determne the width, then available space, then create space to the left and right side of the screen.
+
+
+Secondly, Determin the number of rows that fit on the screen, Repeat the loop for creting alien in one row until it fills the row.
+
+To determine, we subtract the alient height from top, ship height from bottom, two alien height from the bottom of the screen. To create some empty space above the ship so playera can have time to shoot the alien at the beggining stage of the game.
+
+To find the number of rows divide available spae by 2 * alien_height.
+
+Step 17:
+Alien settings, speed, makng moveacross the screen until it drop down to collide or reach bottom of screen.
+first refernce the alien setings in alien.py file, 
+
+Then add an update method to move the alien to right in your alien.py. Then update this helper method into the main alien_invasion game, by creating.
+_update_aliens() method.
+
+NB: The aline_update comes after the bullet update because we muc chect to see if the aliens have been hit by any bullet.
+
+Step 18:
+Check if the alein is in  either edge and add an update methid to ensure it moves n appropriate direction.
+First- In alien.py add method called check_edges().
+then - Modify the update methd to allow motion to left or right
+then -I main alien call method and add
 

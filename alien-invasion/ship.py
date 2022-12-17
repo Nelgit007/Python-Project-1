@@ -10,7 +10,7 @@ class Ship:
 		self.settings = ai_game.settings #To use the ship_speed
 
 		#Load ship image and get rect
-		self.image = pygame.image.load('images/ship.bmp')
+		self.image = pygame.image.load('images/ship2.bmp')
 		self.rect = self.image.get_rect()
 		#Each new ship to start at the bottom center of the screen
 		self.rect.midbottom = self.screen_rect.midbottom
